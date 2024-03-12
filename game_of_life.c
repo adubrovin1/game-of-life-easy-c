@@ -41,8 +41,12 @@ int main(){
         }
     }
 
+    printf("Введите желаемое количество итераций (ограничено сверху max uint_64t):\n");
+    unsigned long long number_of_repetitions;
+    scanf("%llu", &number_of_repetitions);
+
     printf("-------------------------------\n");
-    for (int k = 0; k < 10; k++){
+    for (int k = 0; k < number_of_repetitions; k++){
         one_step(a);
         for (int i = 1; i < 17; i ++){
             for (int j = 1; j < 17; j++){
